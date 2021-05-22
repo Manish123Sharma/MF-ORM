@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="ccoach3" class="firstIOCget.CricketCoach">
+		<property name="ifortune" ref="fortune" />
+		<property name="name" value="Manish" />
+		<property name="email" value="manish19csu173@ncuindia.edu" />
+
+		<property name="team_name" value="IPL_Banglore" />
+		<property name="add" ref="address3"></property>
+	</bean>
+	<bean id="fortune" class="firstIOCget.Fortune">
+
+	</bean>
+	<bean id="address3" class="firstIOCget.Address">
+		<property name="city" value="Rewari" />
+		<property name="state" value="Haryana" />
+		<property name="pincode" value="123401" />
+
+
+
+	</bean>
+</beans>

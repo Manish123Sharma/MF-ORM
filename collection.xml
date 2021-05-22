@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="customer" class="collection_injection.Customer">
+        <property name="names">
+            <list>
+                <value>Manish</value>
+                <value>Mohit</value>
+                <value>Namit</value>
+            </list>
+        </property>
+
+        <property name="Phno">
+            <set>
+                <value>123456789</value>
+                <value>2345656789</value>
+                <value>7896789</value>
+            </set>
+        </property>
+
+        <property name="aadharNo">
+            <map>
+                <entry key="123456789" value="abc"/>
+                <entry key="2345656789" value="xyz"/>
+                <entry key="7896789" value="address"/>
+            </map>
+        </property>
+
+        <property name="email">
+            <props>
+                <prop key="123456789" >manish19csu173@ncuindia.edu</prop>
+                <prop key="2345656789" >mohit19csu179@ncuindia.edu</prop>
+                <prop key="7896789" >namit19csu185@ncuindia.edu</prop>
+            </props>
+        </property>
+
+
+        <property name="address">
+            <map>
+                <entry key="123456789" value-ref="address5"/>
+
+            </map>
+        </property>
+
+
+
+    </bean>
+
+
+    <bean id="address5" class="collection_injection.Address">
+        <property name="city" value="Rewari"/>
+        <property name="state" value="Haryana"/>
+        <property name="pincode" value="123401"/>
+    </bean>
+
+</beans>
